@@ -1,5 +1,4 @@
 const axios = require("axios");
-axios = require('axios');
 let API_KEY = null;
 const endpoint = 'https://dev.to/api/articles/me/published?per_page=1000';
 
@@ -19,7 +18,8 @@ const getBlogs = async () => {
   };
 
   const response = await axios.get(endpoint, config);
+  return response.data;
 
 };
 
-module.exports = {getBlogs};
+module.exports = {getBlogs, setApiKey};
