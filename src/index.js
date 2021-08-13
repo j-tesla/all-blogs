@@ -1,10 +1,19 @@
 const blogs = require('./blogs');
 
-const config = (devAPiKey = null) => {
+const config = ({
+  devAPiKey = null,
+  mediumUsername = null,
+}) => {
   blogs.dev.setApiKey(devAPiKey);
+  blogs.medium.setUserName(mediumUsername);
 };
 
-const getBlogs = () => blogs.dev.getBlogs();
+const getBlogs = async () => {
+  let posts = [];
+  posts = posts.concat(await blogs.dev.getBlogs());
+  posts = posts.concat(await blogs.medium.getBlogs());
+  return posts;
+};
 
 module.exports = {
   config,
