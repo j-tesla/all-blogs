@@ -25,5 +25,5 @@ const getBlogs = async () => {
 
 module.exports = {
   getBlogs,
-  setUserName: setUsername,
+  setUsername,
 };

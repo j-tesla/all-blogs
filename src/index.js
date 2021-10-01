@@ -5,7 +5,7 @@ const config = ({
   mediumUsername = null,
 }) => {
   blogs.dev.setApiKey(devAPiKey);
-  blogs.medium.setUserName(mediumUsername);
+  blogs.medium.setUsername(mediumUsername);
 };
 
 const getBlogs = async () => {
