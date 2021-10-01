@@ -1,6 +1,6 @@
-const dev = require('./dev');
-const medium = require('./medium');
-const hashnode = require('./hashnode');
+const dev = require("./dev");
+const medium = require("./medium");
+const hashnode = require("./hashnode");
 
 const blogs = {
   dev,
