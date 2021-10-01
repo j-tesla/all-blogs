@@ -10,8 +10,10 @@ const config = ({
 
 const getBlogs = async () => {
   let posts = [];
-  posts = posts.concat(await blogs.dev.getBlogs().map((blog) => ({ ...blog, platform: 'dev' })));
-  posts = posts.concat(await blogs.medium.getBlogs().map((blog) => ({ ...blog, platform: 'medium' })));
+  posts = posts.concat(
+      await blogs.dev.getBlogs().map((blog) => ({...blog, platform : 'dev'})));
+  posts = posts.concat(await blogs.medium.getBlogs().map(
+      (blog) => ({...blog, platform : 'medium'})));
   return posts;
 };
 
