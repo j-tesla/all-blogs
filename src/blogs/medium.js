@@ -3,7 +3,7 @@ const { convert } = require('html-to-text');
 
 let userName = null;
 
-const setUserName = (username) => {
+const setUsername = (username) => {
   userName = username;
 };
 
@@ -24,5 +24,5 @@ const getBlogs = async () => {
 
 module.exports = {
   getBlogs,
-  setUserName,
+  setUserName: setUsername,
 };
