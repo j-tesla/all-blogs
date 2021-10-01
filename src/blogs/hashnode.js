@@ -1,8 +1,8 @@
-const axios = require('axios');
+const axios = require("axios");
 
 let userName = null;
 
-const endpoint = 'https://api.hashnode.com';
+const endpoint = "https://api.hashnode.com";
 
 const setUsername = (username) => {
   userName = username;
